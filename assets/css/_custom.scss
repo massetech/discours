@@ -1,0 +1,88 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  position: fixed;
+  // background-image: url('/images/font.jpg');
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  background-position: 0% 0% !important;
+  background-repeat: no-repeat !important;
+}
+
+ h1, h2, h3, h4, h5, p {color: white;}
+
+.card {
+  border: none !important;
+  background-color: transparent !important;
+  margin: 1em auto 2em auto;
+  width: 800px;
+  border-radius: 12px;
+  .card-header, .card-body {
+    background: rgba(0,0,0,0.8);
+  }
+}
+
+.voyant {
+  position: absolute;
+  margin: 2em;
+  z-index: 99;
+  img {
+    width: 200px;
+    border-radius: 100px;
+  }
+  .satisfait {
+    width: 100px;
+    position: absolute;
+    left: 0;
+    bottom: -80px;
+  }
+  .paiement {
+    width: 100px;
+    position: absolute;
+    right: 0;
+    bottom: -80px;
+  }
+}
+
+.planets {
+  .first-row {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .planet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100% !important;
+    img {
+      height: 200px;
+    }
+  }
+  .planet.saturne {
+    img {
+      height: 150px;
+    }
+  }
+}
+
+.pub {
+  margin: 1em !important;
+  img {
+    height: 130px;
+  }
+}
+
+.modal-dialog {
+  background-color: white;
+  border-radius: 20px;
+  h1, h2, h3, h4, h5, p {color: #231142;}
+  p > strong {color: #D5431D;}
+  // p {font-size: 10px; margin-top: 2em !important;}
+  p {font-size: 2em;; margin-top: 1em !important;}
+}

@@ -1,0 +1,130 @@
+!!! 5
+%html(lang="fr")
+  %head
+    %meta(charset="utf-8")
+    %meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    %meta(name="viewport" content="width=device-width, initial-scale=1")
+    %meta(name="description" content="")
+    %meta(name="author" content="")
+
+    %title= 'Astral360°'
+    %link(rel="stylesheet" href='#{static_path(@conn, "/css/app.css")}')
+    %body{background: "#{static_path(@conn, "/images/font.jpg")}"}
+      %main
+        .voyant
+          = img_tag static_path(@conn, "/images/voyant.png"), class: "voyant1"
+          = img_tag static_path(@conn, "/images/satisfait.png"), class: "satisfait"
+          = img_tag static_path(@conn, "/images/paiement.png"), class: "paiement"
+        .container
+          .card.text-center
+            .card-header
+              %h2= "Bienvenue sur monPlanAstral360°.com à"
+            .card-body
+              %h1.card-title= "Hélène Mulliez"
+
+        .container.planets
+          .row.first-row
+            .planet.mercure
+              %a{data-toggle: "modal", data-target: "#mercure"}
+                = img_tag static_path(@conn, "/images/planets/mercure.png")
+          .row
+            .col-3.offset-1
+              .planet.jupiter
+                %a{data-toggle: "modal", data-target: "#jupiter"}
+                  = img_tag static_path(@conn, "/images/planets/jupiter.png")
+            .col-3.offset-4
+              .planet.venus
+                %a{data-toggle: "modal", data-target: "#venus"}
+                  = img_tag static_path(@conn, "/images/planets/venus.png")
+          .row
+            .col-3.offset-3
+              .planet.mars.col3.offset2
+                %a{data-toggle: "modal", data-target: "#mars"}
+                  = img_tag static_path(@conn, "/images/planets/mars.png")
+            .col-3-offset-1
+              .planet.saturne
+                %a{data-toggle: "modal", data-target: "#saturne"}
+                  = img_tag static_path(@conn, "/images/planets/saturn.png")
+        .container
+          .row
+            %h4= "Nos partenaires :"
+          .row
+            %ul.nav
+              %li.pub
+                = img_tag static_path(@conn, "/images/pubs/stef.png")
+              %li.pub
+                = img_tag static_path(@conn, "/images/pubs/mat.jpg")
+              %li.pub
+                = img_tag static_path(@conn, "/images/pubs/khalifa.jpg")
+              %li.pub
+                = img_tag static_path(@conn, "/images/pubs/alain.png")
+              %li.pub
+                = img_tag static_path(@conn, "/images/pubs/serieux.jpg")
+
+        .modal.fade{id: "mercure", tabindex: "-1", role: "dialog", aria-labelledby: "myLargeModalLabel", aria-hidden: "true"}
+          .modal-dialog.modal-lg
+            .modal-header
+              .modal-title
+                %h1= "Mercure"
+            .modal-body
+              %h1= "Le Mercure de naissance est en Capricorne et en Maison IV"
+              %p
+                = "Le sujet a un "
+                %strong= "intellect méthodique, pragmatique et réaliste "
+                = "qui prédispose au domaine de la mécanique !"
+              %p
+                = "Dans le rapport à autrui, il est fortement apprécié la "
+                %strong= "nature sociable du sujet"
+                = "son approche par le "
+                %strong= "dialogue et l’écoute..."
+        .modal.fade{id: "jupiter", tabindex: "-1", role: "dialog", aria-labelledby: "myLargeModalLabel", aria-hidden: "true"}
+          .modal-dialog.modal-lg
+            .modal-header
+              .modal-title
+                %h1= "Jupiter"
+            .modal-body
+              %h1= "Jupiter maîtrise le signe du Sagittaire et se trouve donc en exil en Gémeaux"
+              %p
+                = "La planette régit les"
+                %strong= " ambitions de l'être aimé, "
+                = "que ce soit sur les plans humain, social ou spirituel. La planète géante"
+                %strong= " sourit et magnifie "
+                = "ceux qu'elle touche."
+        .modal.fade{id: "venus", tabindex: "-1", role: "dialog", aria-labelledby: "myLargeModalLabel", aria-hidden: "true"}
+          .modal-dialog.modal-lg
+            .modal-header
+              .modal-title
+                %h1= "Vénus"
+            .modal-body
+              %h1= "Coucou, c'est le test de la phrase bizare mais marrante"
+              %p= @text
+        .modal.fade{id: "mars", tabindex: "-1", role: "dialog", aria-labelledby: "myLargeModalLabel", aria-hidden: "true"}
+          .modal-dialog.modal-lg
+            .modal-header
+              .modal-title
+                %h1= "Mars"
+            .modal-body
+              %h1= "Votre Mars de naissance est en Balance et en Maison II."
+              %p
+                = "D'une"
+                %strong= " nature passionnée "
+                = ", aux "
+                %strong= " forts appétits physiques "
+                = "le sujet est"
+                %strong= " infatigable"
+                = ". On l’estime pour son "
+                %strong= "enthousiasme à toutes épreuves"
+        .modal.fade{id: "saturne", tabindex: "-1", role: "dialog", aria-labelledby: "myLargeModalLabel", aria-hidden: "true"}
+          .modal-dialog.modal-lg
+            .modal-header
+              .modal-title
+                %h1= "Saturne"
+            .modal-body
+              %h1= "Saturne a enfin quitté le Sagittaire pour intégrer le Capricorne."
+              %p
+                = "La planète devrait donc nous permettre de "
+                %strong= "concrétiser un choix de vie, "
+                = "et "
+                %strong= "certains blocages "
+                = "qui freinaient notre expansion devraient enfin céder..."
+      %script(src='#{static_path(@conn, "/js/app.js")}')
