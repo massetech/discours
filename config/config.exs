@@ -9,8 +9,8 @@ config :phoenix, :template_engines,
   haml: PhoenixHaml.Engine
 
 # General application configuration
-config :discours,
-  ecto_repos: [Discours.Repo]
+# config :discours,
+#   ecto_repos: [Discours.Repo]
 
 # Configures the endpoint
 config :discours, DiscoursWeb.Endpoint,
